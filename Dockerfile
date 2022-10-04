@@ -76,8 +76,6 @@ RUN chown -R nobody.nobody /var/www/html /run /var/lib/nginx /var/log/nginx
 # Add application
 COPY --chown=nobody src/ /var/www/html/
 
-ENV XDEBUG_CONFIG "client_port=9003 log=/var/www/html/xdebug.log"
-ENV XDEBUG_MODE "develop,debug"
 # Expose the port nginx is reachable on
 EXPOSE 8080 9000
 
